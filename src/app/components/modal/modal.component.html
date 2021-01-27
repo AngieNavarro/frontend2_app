@@ -1,0 +1,61 @@
+<div class="modal-header">
+  <h4 class="modal-title pull-left">{{ title }}</h4>
+  <button
+    type="button"
+    class="close pull-right"
+    aria-label="Close"
+    (click)="bsModalRef.hide()"
+  >
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <p>El Usuario realizara {{ title }}</p>
+  <form
+    action=""
+    *ngIf="title == 'Retiros' || title == 'Depositos'"
+    (ngSubmit)="guardar()"
+  >
+    <p>No Cuenta: {{ cuenta }}</p>
+    <p>Saldo Actual: {{ saldo_actual }}</p>
+    <p>Por favor digete el monto</p>
+    <div class="form-group" style="text-align: center">
+      <input
+        type="number"
+        placeholder="saldo"
+        name="saldo"
+        class="form-control"
+        required
+        [(ngModel)]="form.saldo"
+      />
+    </div>
+    <button type="submit" class="btn btn-success">Guardar</button>
+  </form>
+  <form action="" *ngIf="title == 'Transferencias'" (ngSubmit)="transferir()">
+    <p>No Cuenta {{ cuenta }}</p>
+    <p>Saldo Actual: {{ saldo_actual }}</p>
+    <p>Por favor digete el monto</p>
+    <div class="form-group" style="text-align: center">
+      <input
+        type="number"
+        placeholder="saldo"
+        name="saldo"
+        class="form-control"
+        required
+        [(ngModel)]="form_transferencia.saldo"
+      />
+    </div>
+    <p>Por favor digete el No de la Cuenta a transferir</p>
+    <div class="form-group" style="text-align: center">
+      <input
+        type="number"
+        placeholder="cuenta"
+        name="cuenta"
+        class="form-control"
+        required
+        [(ngModel)]="form_transferencia.cuenta_externa"
+      />
+    </div>
+    <button type="submit" class="btn btn-success" style="text-align: center;">Guardar</button>
+  </form>
+</div>

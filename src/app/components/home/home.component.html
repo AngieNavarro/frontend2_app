@@ -1,0 +1,68 @@
+<body>
+  <div class="container" *ngIf="!mostrar">
+    <h1 style="text-align: center">APP BANCARIA</h1>
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          >BIENVENIDO {{ this.form_registro.nombres }}
+        </a>
+      </div>
+    </nav>
+    <br />
+    <h5>Datos de Usuario</h5>
+    <br />
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Identificación</th>
+          <th>Correo</th>
+          <th>No.Cuenta</th>
+          <th>Saldo</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ this.form_registro.identificacion }}</td>
+          <td>{{ this.form_registro.correo }}</td>
+          <td>{{ this.form_registro.cuenta }}</td>
+          <td>{{ this.form_registro.monto }}</td>
+          <td>
+            {{ this.form_registro.habilitado ? "Habilitado" : "In-Habilitado" }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <h5>Acciones</h5>
+    <br />
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <button class="btn btn-primary" (click)="Retiros()">Retiros</button>
+          </td>
+          <td>
+            <button class="btn btn-success" (click)="Depositos()">
+              Depositos
+            </button>
+          </td>
+          <td>
+            <button class="btn btn-warning" (click)="Trasnferencias()">
+              Transferencias
+            </button>
+          </td>
+          <td>
+            <button class="btn btn-danger" (click)="Inhabilitar_cuenta()">
+              Inhabilitar cuenta
+            </button>
+          </td>
+          <td><button class="btn btn-info" (click)="salir()">Salir</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div *ngIf="mostrar">
+    <app-root></app-root>
+  </div>
+</body>

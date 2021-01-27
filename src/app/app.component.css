@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+*:focus {
+  outline: none;
+}
+body {
+  font-family: Arial;
+  padding: 80px;
+}
+.login {
+  margin: 20px auto;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+}
+.login-screen  {
+  background-color: #fff;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  width: 870px;
+  height:650px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 50px rgb(199, 196, 196);
+}
+.app-title {
+  text-align: center;
+  color: #777;
+}
+.app-title2{
+  text-align: center;
+  color: #777;
+}
+.text-orange{
+    color: blue;
+}
+.login-form {
+  text-align: center;
+}
+form .form-group {
+  margin-bottom: 10px;
+}
+input {
+  text-align: center;
+  background-color: #ecf0f1;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 200;
+  padding: 10px 0;
+  width: 320px;
+  transition: border 0.5s;
+}
+input:focus{
+  outline: none;
+  box-shadow: 3px 3px 10px #333;
+}
+.clave{
+  margin-right:-35px;
+}
+.btn {
+  border: 2px solid transparent;
+  color: #ffffff;  
+  background:  rgba(7, 93, 192, 0.726);
+  font-size: 16px;
+  line-height: 25px;
+  padding: 10px 0;
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 3px;
+  box-shadow: none;
+  transition: 0.25s;
+  display: block;
+  width: 320px;
+  margin: 0 auto;
+}
+.politica{
+  font-size: 12px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.politica .cambio_color{
+  color: green;
+}
+.politica .cambio_color:hover{
+  cursor: pointer;
+}
+.login-link {
+  font-size: 14px;
+  display: block;
+  margin-top: 12px;
+  cursor: pointer;
+}
+.login-link:hover{
+  color: green;
+}
+
+.close-btn:hover{
+ color: orange;
+  cursor: pointer;
+}
+.field-icon {
+  float: right;
+  /* margin-right: 16px; */
+  margin-top: 15px;
+  /* position: fixed; */
+  /* z-index: 3; */
+} 
